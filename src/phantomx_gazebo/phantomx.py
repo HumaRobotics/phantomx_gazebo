@@ -32,7 +32,7 @@ class PhantomX:
 
         rospy.sleep(1)
 
-        self._pub_cmd_vel = rospy.Publisher(ns + 'cmd_vel', Twist)
+        self._pub_cmd_vel = rospy.Publisher(ns + 'cmd_vel', Twist, queue_size=1)
 
     def set_walk_velocity(self, x, y, t):
         msg = Twist()
