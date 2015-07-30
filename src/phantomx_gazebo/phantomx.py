@@ -27,7 +27,7 @@ class PhantomX:
         self._pub_joints = {}
         for j in self.joints:
             p = rospy.Publisher(
-                ns + j + '_position_controller/command', Float64)
+                ns + j + '_position_controller/command', Float64, queue_size=1)
             self._pub_joints[j] = p
 
         rospy.sleep(1)
