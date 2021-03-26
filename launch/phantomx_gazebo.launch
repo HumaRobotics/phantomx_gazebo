@@ -6,8 +6,8 @@
     <arg name="paused" value="true"/>
   </include>
   
-   <param name="robot_description" textfile="$(find phantomx_description)/urdf/phantomx.urdf" />  
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find phantomx_description)/urdf/phantomx.urdf -urdf -model phantomx -z 0.2" />
+   <param name="robot_description" textfile="$(find phantomx_description)/urdf/autogen_phantomx.urdf" />  
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find phantomx_description)/urdf/autogen_phantomx.urdf -urdf -model phantomx -z 0.2" />
 
 
 
